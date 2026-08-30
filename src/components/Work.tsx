@@ -1,4 +1,27 @@
-import { Circle } from 'lucide-react';
+import { ArrowUpRight, Circle } from 'lucide-react';
+
+const seliseRoles = [
+  {
+    title: 'Senior Software Engineer',
+    dates: 'Jun 2026 – Present · 3 mos',
+    current: true,
+  },
+  {
+    title: 'Software Engineer',
+    dates: 'Jun 2024 – May 2026 · 2 yrs',
+    details: [
+      'Developed and maintained high-performance front-end applications for enterprise systems built on a microservices architecture.',
+      'Collaborated on project requirements and managed front-end workflows, milestones, and timelines.',
+      'Created and managed technical and business documentation.',
+    ],
+    skills: 'Front-end development · Next.js · Microservices',
+  },
+  {
+    title: 'Associate Software Engineer',
+    dates: 'Mar 2023 – May 2024 · 1 yr 3 mos',
+    skills: 'Front-end development · Angular · TypeScript',
+  },
+];
 
 export default function Work() {
   return (
@@ -6,59 +29,76 @@ export default function Work() {
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-12 gap-16">
           <div className="md:col-span-4">
-            <p className="text-sm text-slate-500 tracking-wide mb-4">EXPERIENCE</p>
+            <p className="text-sm text-primary tracking-wide mb-4">EXPERIENCE</p>
           </div>
-          
+
           <div className="md:col-span-8 space-y-16">
-            <div className="group">
-              <div className="flex items-start justify-between mb-4">
+            <article>
+              <header className="mb-8 flex items-start gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary text-sm font-semibold text-white">
+                  SG
+                </div>
                 <div>
-                  <h3 className="text-xl font-medium mb-1">Software Engineer</h3>
-                  <p className="text-slate-600">SELISE Digital Platforms</p>
+                  <a
+                    href="https://www.linkedin.com/company/2294248/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-1.5 text-xl font-medium transition-colors hover:text-primary"
+                  >
+                    SELISE Group
+                    <ArrowUpRight size={16} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                  </a>
+                  <p className="mt-1 text-sm text-slate-500">Full-time · 3 yrs 6 mos</p>
+                  <p className="mt-1 text-sm text-slate-500">Dhaka, Bangladesh · Hybrid</p>
                 </div>
-                <div className="text-right">
-                  <span className="inline-block bg-slate-900 text-white text-xs px-3 py-1 rounded-full mb-2">Current</span>
-                  <p className="text-sm text-slate-500">Feb 2023 – Present</p>
-                </div>
-              </div>
-              <ul className="space-y-3 text-slate-600">
-                <li className="flex gap-3 text-sm leading-relaxed">
-                  <Circle size={6} className="mt-2 flex-shrink-0 fill-current" />
-                  <span>Develop and maintain high-performance front-end applications using microservices architecture</span>
-                </li>
-                <li className="flex gap-3 text-sm leading-relaxed">
-                  <Circle size={6} className="mt-2 flex-shrink-0 fill-current" />
-                  <span>Collaborate on project requirements and manage front-end workflows, overseeing milestones and timelines</span>
-                </li>
-                <li className="flex gap-3 text-sm leading-relaxed">
-                  <Circle size={6} className="mt-2 flex-shrink-0 fill-current" />
-                  <span>Create and manage comprehensive technical and business documentation</span>
-                </li>
-              </ul>
-            </div>
+              </header>
 
-            <div className="border-t border-slate-100 pt-16"></div>
+              <ol className="relative ml-6 space-y-10 border-l border-primary/25 pl-8">
+                {seliseRoles.map((role) => (
+                  <li key={role.title} className="relative">
+                    <span className={`absolute -left-[2.34rem] top-1.5 h-3 w-3 rounded-full border-2 border-white ${role.current ? 'bg-primary' : 'bg-slate-300'}`} />
+                    <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
+                      <h3 className="text-lg font-medium text-slate-900">{role.title}</h3>
+                      <p className={`shrink-0 text-sm ${role.current ? 'font-medium text-primary' : 'text-slate-500'}`}>
+                        {role.dates}
+                      </p>
+                    </div>
 
-            <div className="group">
-              <div className="flex items-start justify-between mb-4">
+                    {role.details && (
+                      <ul className="mt-4 space-y-3 text-slate-600">
+                        {role.details.map((detail) => (
+                          <li key={detail} className="flex gap-3 text-sm leading-relaxed">
+                            <Circle size={6} className="mt-2 flex-shrink-0 fill-current text-primary" />
+                            <span>{detail}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+
+                    {role.skills && (
+                      <p className="mt-4 text-xs font-medium text-primary">{role.skills}</p>
+                    )}
+                  </li>
+                ))}
+              </ol>
+            </article>
+
+            <div className="border-t border-slate-100 pt-16">
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-8">
                 <div>
                   <h3 className="text-xl font-medium mb-1">Assistant Relationship Manager</h3>
                   <p className="text-slate-600">UCB Stock Brokerage Limited</p>
                 </div>
-                <p className="text-sm text-slate-500">Aug 2021 – Nov 2022 <span className="text-slate-400">(1yr)</span></p>
+                <p className="shrink-0 text-sm text-slate-500">Aug 2021 – Nov 2022 · 1 yr</p>
               </div>
-              <ul className="space-y-3 text-slate-600">
+              <ul className="mt-4 space-y-3 text-slate-600">
                 <li className="flex gap-3 text-sm leading-relaxed">
-                  <Circle size={6} className="mt-2 flex-shrink-0 fill-current" />
-                  <span>Built proactive relationships with clients to explore business opportunities and manage portfolios</span>
+                  <Circle size={6} className="mt-2 flex-shrink-0 fill-current text-primary" />
+                  <span>Built proactive client relationships, explored business opportunities, and managed portfolios.</span>
                 </li>
                 <li className="flex gap-3 text-sm leading-relaxed">
-                  <Circle size={6} className="mt-2 flex-shrink-0 fill-current" />
-                  <span>Delivered professional client service achieving high satisfaction rates</span>
-                </li>
-                <li className="flex gap-3 text-sm leading-relaxed">
-                  <Circle size={6} className="mt-2 flex-shrink-0 fill-current" />
-                  <span>Managed international roadshow activities including coordination, content creation, and documentation</span>
+                  <Circle size={6} className="mt-2 flex-shrink-0 fill-current text-primary" />
+                  <span>Coordinated international roadshows, content creation, and supporting documentation.</span>
                 </li>
               </ul>
             </div>

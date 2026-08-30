@@ -14,4 +14,8 @@
   body {
     @apply bg-white text-slate-900;
   }
+
+  ::selection {
+    @apply bg-primary/20 text-slate-950;
+  }
 }

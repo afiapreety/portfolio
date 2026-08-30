@@ -13,7 +13,7 @@ export default function Portfolio() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'work', 'skills', 'education', 'contact'];
+      const sections = ['home', 'about', 'work', 'education', 'skills', 'contact'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -42,8 +42,8 @@ export default function Portfolio() {
       <Hero />
       <About />
       <Work />
-      <Skills />
       <Education />
+      <Skills />
       <Contact />
       <Footer />
     </div>

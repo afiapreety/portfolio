@@ -19,7 +19,7 @@ export default function Navigation({ activeSection, scrollToSection }: Navigatio
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const menuItems = ['about', 'work', 'skills', 'education', 'contact'];
+  const menuItems = ['about', 'work', 'education', 'skills', 'contact'];
 
   const handleNavClick = (id: string) => {
     scrollToSection(id);
@@ -27,14 +27,14 @@ export default function Navigation({ activeSection, scrollToSection }: Navigatio
   };
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 backdrop-blur-md shadow-sm' : 'bg-transparent'}`}>
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-[#fbfaf8]/85 backdrop-blur-md shadow-[0_1px_0_rgba(165,91,65,0.12)]' : 'bg-transparent'}`}>
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <button 
             onClick={() => handleNavClick('home')}
-            className="text-sm font-medium tracking-tight hover:text-slate-600 transition-colors"
+            className="text-sm font-medium tracking-tight transition-colors hover:text-primary"
           >
-            Afia Anjum
+            Afia Anjum Preety
           </button>
           
           <div className="hidden md:flex items-center gap-8">
@@ -44,8 +44,8 @@ export default function Navigation({ activeSection, scrollToSection }: Navigatio
                 onClick={() => handleNavClick(item)}
                 className={`text-sm capitalize transition-colors ${
                   activeSection === item 
-                    ? 'text-slate-900 font-medium' 
-                    : 'text-slate-500 hover:text-slate-900'
+                    ? 'text-primary font-medium'
+                    : 'text-slate-500 hover:text-primary'
                 }`}
               >
                 {item}
@@ -69,7 +69,7 @@ export default function Navigation({ activeSection, scrollToSection }: Navigatio
               <button
                 key={item}
                 onClick={() => handleNavClick(item)}
-                className="block w-full text-left text-sm capitalize py-2 text-slate-600 hover:text-slate-900"
+                className="block w-full text-left text-sm capitalize py-2 text-slate-600 hover:text-primary"
               >
                 {item}
               </button>
