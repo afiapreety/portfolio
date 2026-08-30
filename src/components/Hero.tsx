@@ -11,20 +11,23 @@ export default function Hero() {
       <div className="mx-auto grid w-full max-w-6xl items-center gap-10 lg:grid-cols-12 lg:gap-16">
         <div className="order-2 lg:order-1 lg:col-span-8">
           <p className="mb-5 flex items-center gap-3 text-xs font-medium uppercase tracking-[0.18em] text-primary">
-            <span className="h-px w-8 bg-primary" />
-            Senior Software Engineer
+            {/* <span className="h-px w-8 bg-primary" />
+            Senior Software Engineer */}
           </p>
 
           <h1 className="max-w-3xl text-5xl font-light leading-[1.02] tracking-[-0.045em] text-slate-950 sm:text-6xl lg:text-7xl">
-            Hi, I’m <span className="text-primary">Afia Anjum Preety.</span>
+            Hi, I’m{' '}
+            <span className="hero-name-reveal">
+              <span className="hero-name">Afia Anjum Preety.</span>
+            </span>
           </h1>
 
           <p className="mt-7 max-w-2xl text-xl leading-relaxed text-slate-700 sm:text-2xl">
-            I build and lead frontend work for enterprise products—making complex systems clear, reliable, and easy to use.
+            I build frontend experiences for enterprise platforms—turning complex capabilities into clear, reliable, and easy-to-use interfaces.
           </p>
 
           <p className="mt-5 max-w-xl text-base leading-relaxed text-slate-500">
-            Currently at SELISE Group, working with React, Angular, Next.js, and microservice architecture from Dhaka, Bangladesh.
+            At SELISE Group, I contribute to product delivery with React, Angular, and Next.js while helping teams plan frontend work and stay aligned.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-5">

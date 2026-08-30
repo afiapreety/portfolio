@@ -32,9 +32,16 @@ export default function Navigation({ activeSection, scrollToSection }: Navigatio
         <div className="flex justify-between items-center h-16">
           <button 
             onClick={() => handleNavClick('home')}
-            className="text-sm font-medium tracking-tight transition-colors hover:text-primary"
+            className="group inline-flex items-center gap-2.5 text-sm font-semibold tracking-[-0.02em] text-primary transition-colors hover:text-primary/75"
+            aria-label="Go to the home section"
           >
-            Afia Anjum Preety
+            <img
+              src={`${import.meta.env.BASE_URL}aap-logo.svg`}
+              alt=""
+              aria-hidden="true"
+              className="h-8 w-8 transition-opacity duration-200 group-hover:opacity-70"
+            />
+            <span>Afia Anjum Preety</span>
           </button>
           
           <div className="hidden md:flex items-center gap-8">

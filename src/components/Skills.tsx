@@ -2,7 +2,7 @@ const skillGroups = [
   { category: 'Frontend', items: ['Angular', 'React', 'Next.js', 'TypeScript', 'JavaScript', 'HTML/CSS'] },
   { category: 'Backend', items: ['Node.js', 'Express', 'Java', 'Swift'] },
   { category: 'Data', items: ['MongoDB', 'MySQL'] },
-  { category: 'Delivery', items: ['Frontend ownership', 'Project coordination', 'Technical documentation'] },
+  { category: 'Delivery', items: ['Frontend coordination', 'Requirement planning', 'Cross-functional delivery', 'Technical documentation'] },
 ];
 
 export default function Skills() {
@@ -13,7 +13,7 @@ export default function Skills() {
           <div className="md:col-span-4">
             <p className="mb-3 text-sm tracking-wide text-primary">WHAT I BRING</p>
             <p className="max-w-xs text-sm leading-relaxed text-slate-500">
-              Hands-on engineering paired with the ownership needed to move work from requirements to release.
+              Hands-on engineering paired with product-minded coordination from requirements through release.
             </p>
           </div>
 

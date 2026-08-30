@@ -34,8 +34,8 @@ export default function About() {
             </p>
             <p className="text-lg text-slate-600 leading-relaxed">
               At SELISE Group, I progressed from Associate Software Engineer to Senior Software
-              Engineer. Along the way, I’ve built enterprise applications, owned frontend workflows,
-              guided delivery milestones, and translated technical decisions across teams.
+              Engineer. Along the way, I’ve built enterprise applications, coordinated frontend work,
+              supported delivery milestones, and translated technical decisions across teams.
             </p>
             <p className="text-base text-slate-500 leading-relaxed">
               My earlier career in financial services shaped how I communicate, understand business

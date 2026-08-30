@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title description">
+  <title id="title">AAP monogram</title>
+  <desc id="description">The initials of Afia Anjum Preety drawn as a minimal line monogram</desc>
+  <g fill="none" stroke="#a55b41" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+    <path d="M4 48 13.5 16 23 48M7.4 37h12.2"/>
+    <path d="M21 48 30.5 16 40 48M24.4 37h12.2"/>
+    <path d="M44 48V16h7c6.1 0 9.5 4.1 9.5 10.2S57.1 36.5 51 36.5h-7"/>
+  </g>
+</svg>

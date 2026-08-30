@@ -10,7 +10,8 @@ export default {
         primary: '#a55b41',
       },
       fontFamily: {
-        sans: ['-apple-system', 'BlinkMacSystemFont', 'Inter', 'Segoe UI', 'sans-serif'],
+        sans: ['Manrope', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+        mono: ['DM Mono', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
     },
   },

@@ -5,6 +5,17 @@ const seliseRoles = [
     title: 'Senior Software Engineer',
     dates: 'Jun 2026 – Present · 3 mos',
     current: true,
+    details: [
+      'Contribute to the frontend delivery of SELISE Blocks capabilities, including enterprise identity, localization, AI and knowledge bases, data services, observability, and workflows.',
+      'Build and improve reusable interfaces that connect product experiences with shared platform services.',
+      'Work with product, backend, and QA teams to clarify requirements, break work into practical tasks, and support delivery through testing and release.',
+      'Coordinate frontend tasks and technical resources when needed, helping the team track progress and raise blockers early.',
+    ],
+    skills: 'Enterprise frontend · Product coordination · Cross-functional delivery',
+    links: [
+      { label: 'SELISE Blocks', href: 'https://seliseblocks.com/' },
+      { label: 'Documentation', href: 'https://docs.seliseblocks.com/' },
+    ],
   },
   {
     title: 'Software Engineer',
@@ -19,7 +30,11 @@ const seliseRoles = [
   {
     title: 'Associate Software Engineer',
     dates: 'Mar 2023 – May 2024 · 1 yr 3 mos',
-    skills: 'Front-end development · Angular · TypeScript',
+    details: [
+      'Built frontend features for a browser extension that helped content editors update multilingual content through the localization platform.',
+      'Helped coordinate requirements, tasks, and delivery follow-ups for the extension with the engineering team.',
+    ],
+    skills: 'Browser extensions · Localization · Angular · TypeScript · Delivery coordination',
   },
 ];
 
@@ -77,6 +92,23 @@ export default function Work() {
 
                     {role.skills && (
                       <p className="mt-4 text-xs font-medium text-primary">{role.skills}</p>
+                    )}
+
+                    {role.links && (
+                      <div className="mt-4 flex flex-wrap gap-4">
+                        {role.links.map((link) => (
+                          <a
+                            key={link.href}
+                            href={link.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group inline-flex items-center gap-1.5 text-xs font-medium text-slate-600 transition-colors hover:text-primary"
+                          >
+                            {link.label}
+                            <ArrowUpRight size={13} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                          </a>
+                        ))}
+                      </div>
                     )}
                   </li>
                 ))}
