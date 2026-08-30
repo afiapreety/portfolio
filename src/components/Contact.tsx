@@ -20,7 +20,7 @@ const contactLinks = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="bg-slate-50 px-6 py-24 lg:px-8">
+    <section id="contact" className="sea-surface px-6 py-28 lg:px-8">
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-10 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-4">
@@ -28,7 +28,7 @@ export default function Contact() {
           </div>
 
           <div className="md:col-span-8">
-            <h2 className="mb-8 text-3xl font-light tracking-tight text-slate-900 md:text-4xl">
+            <h2 className="mb-8 text-3xl font-light tracking-tight text-white md:text-4xl">
               Connect with me.
             </h2>
             <div className="flex flex-wrap gap-3">
@@ -38,9 +38,9 @@ export default function Contact() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-3 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-medium text-slate-700 transition-all hover:border-primary hover:text-primary"
+                  className="sea-panel group inline-flex items-center gap-3 rounded-full px-4 py-2.5 text-sm font-medium text-slate-200 transition-all hover:-translate-y-0.5 hover:border-primary/60 hover:text-primary"
                 >
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 transition-colors group-hover:bg-primary/10">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-violet-300/10 transition-colors group-hover:bg-primary/15">
                     {link.icon}
                   </span>
                   {link.label}

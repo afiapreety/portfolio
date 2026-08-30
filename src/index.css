@@ -12,10 +12,26 @@
   }
   
   body {
-    @apply bg-white text-slate-900;
+    @apply bg-ocean text-slate-100;
   }
 
   ::selection {
-    @apply bg-primary/20 text-slate-950;
+    @apply bg-primary/30 text-white;
+  }
+}
+
+@layer components {
+  .sea-surface {
+    background:
+      radial-gradient(circle at 12% 20%, rgba(139, 92, 246, 0.14), transparent 28rem),
+      radial-gradient(circle at 88% 72%, rgba(192, 132, 252, 0.1), transparent 24rem),
+      #040316;
+  }
+
+  .sea-panel {
+    background: rgba(17, 12, 43, 0.7);
+    border: 1px solid rgba(216, 180, 254, 0.14);
+    box-shadow: 0 24px 80px rgba(4, 3, 22, 0.38);
+    backdrop-filter: blur(18px);
   }
 }

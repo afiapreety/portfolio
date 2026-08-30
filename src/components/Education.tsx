@@ -42,7 +42,7 @@ const achievements = [
 
 export default function Education() {
   return (
-    <section id="education" className="px-6 py-24 lg:px-8">
+    <section id="education" className="sea-surface px-6 py-28 lg:px-8">
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-12 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-4">
@@ -50,15 +50,15 @@ export default function Education() {
           </div>
 
           <div className="space-y-14 md:col-span-8">
-            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5 sm:p-6">
-              <div className="mb-7 flex items-end justify-between border-b border-slate-200 pb-4">
+            <div className="sea-panel rounded-2xl p-5 sm:p-6">
+              <div className="mb-7 flex items-end justify-between border-b border-violet-200/10 pb-4">
                 <div>
                   <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-primary">Player progress</p>
-                  <h3 className="mt-1 text-lg font-medium text-slate-900">Academic journey</h3>
+                  <h3 className="mt-1 text-lg font-medium text-white">Academic journey</h3>
                 </div>
                 <div className="text-right font-mono">
-                  <p className="text-lg font-semibold text-slate-900">3 / 3</p>
-                  <p className="text-[9px] uppercase tracking-[0.18em] text-slate-400">Stages complete</p>
+                  <p className="text-lg font-semibold text-white">3 / 3</p>
+                  <p className="text-[9px] uppercase tracking-[0.18em] text-violet-300/45">Stages complete</p>
                 </div>
               </div>
 
@@ -66,19 +66,19 @@ export default function Education() {
                 {educationStages.map((education) => (
                   <li
                     key={education.stage}
-                    className="group rounded-xl border border-slate-200 bg-white p-4 transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-sm"
+                    className="group rounded-xl border border-violet-200/10 bg-violet-950/25 p-4 transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:bg-violet-950/45"
                   >
                     <div className="mb-6 flex items-center justify-between font-mono text-[9px] uppercase tracking-[0.16em]">
-                      <span className="text-slate-400">Stage {education.stage}</span>
+                      <span className="text-violet-300/45">Stage {education.stage}</span>
                       <span className="text-primary">Complete</span>
                     </div>
                     <span className="flex h-9 w-9 items-center justify-center rounded-full border border-primary/40 bg-primary/10 font-mono text-xs font-semibold text-primary">
                       {education.stage}
                     </span>
-                    <h4 className="mt-4 min-h-[2.75rem] text-sm font-medium leading-snug text-slate-900">{education.qualification}</h4>
-                    <p className="mt-2 min-h-[2.25rem] text-xs leading-relaxed text-slate-500">{education.institution}</p>
-                    <div className="mt-5 border-t border-slate-100 pt-3 text-xs">
-                      <p className="text-slate-400">{education.period}</p>
+                    <h4 className="mt-4 min-h-[2.75rem] text-sm font-medium leading-snug text-violet-50">{education.qualification}</h4>
+                    <p className="mt-2 min-h-[2.25rem] text-xs leading-relaxed text-slate-400">{education.institution}</p>
+                    <div className="mt-5 border-t border-violet-200/10 pt-3 text-xs">
+                      <p className="text-violet-300/45">{education.period}</p>
                       <p className="mt-1 font-medium text-primary">{education.result}</p>
                     </div>
                   </li>
@@ -92,24 +92,24 @@ export default function Education() {
               </div>
             </div>
 
-            <div className="border-t border-slate-100 pt-12">
+            <div className="border-t border-violet-200/10 pt-12">
               <div className="mb-7 flex items-end justify-between">
-                <h3 className="text-xs uppercase tracking-wide text-slate-400">🏆 Selected Achievements</h3>
-                <span className="font-mono text-[10px] tracking-[0.18em] text-slate-400">01—03</span>
+                <h3 className="text-xs uppercase tracking-wide text-violet-300/55">🏆 Selected Achievements</h3>
+                <span className="font-mono text-[10px] tracking-[0.18em] text-violet-300/45">01—03</span>
               </div>
 
-              <div className="border-b border-slate-200">
+              <div className="border-b border-violet-200/10">
                 {achievements.map((achievement, index) => (
                   <article
                     key={achievement.title}
-                    className="group grid grid-cols-[3rem_1fr_auto] items-center gap-4 border-t border-slate-200 py-5 transition-colors hover:border-primary/40"
+                    className="group grid grid-cols-[3rem_1fr_auto] items-center gap-4 border-t border-violet-200/10 py-5 transition-colors hover:border-primary/40"
                   >
                     <span className="flex h-11 w-11 items-center justify-center rounded-full bg-primary/10 text-xl transition-transform duration-300 group-hover:scale-110" aria-hidden="true">
                       {achievement.emoji}
                     </span>
                     <div>
-                      <h4 className="text-sm font-medium leading-snug text-slate-900">{achievement.title}</h4>
-                      <p className="mt-1 text-xs leading-relaxed text-slate-500">{achievement.detail}</p>
+                      <h4 className="text-sm font-medium leading-snug text-violet-50">{achievement.title}</h4>
+                      <p className="mt-1 text-xs leading-relaxed text-slate-400">{achievement.detail}</p>
                     </div>
                     <span className="hidden font-mono text-xs text-primary sm:block">0{index + 1}</span>
                   </article>

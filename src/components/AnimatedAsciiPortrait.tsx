@@ -71,8 +71,8 @@ export default function AnimatedAsciiPortrait() {
         particle.y += (targetY - particle.y) * easing;
 
         context.fillStyle = isDisturbed
-          ? `rgba(165, 91, 65, ${Math.min(1, particle.opacity + 0.18)})`
-          : `rgba(41, 37, 36, ${particle.opacity})`;
+          ? `rgba(216, 180, 254, ${Math.min(1, particle.opacity + 0.18)})`
+          : `rgba(237, 233, 254, ${particle.opacity})`;
         context.fillText(particle.character, particle.x, particle.y);
       });
 

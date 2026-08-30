@@ -25,7 +25,7 @@ const seliseRoles = [
 
 export default function Work() {
   return (
-    <section id="work" className="py-32 px-6 lg:px-8">
+    <section id="work" className="bg-[#030d22] px-6 py-28 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-12 gap-16">
           <div className="md:col-span-4">
@@ -35,7 +35,7 @@ export default function Work() {
           <div className="md:col-span-8 space-y-16">
             <article>
               <header className="mb-8 flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary text-sm font-semibold text-white">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-primary text-sm font-semibold text-ocean shadow-[0_0_28px_rgba(192,132,252,0.25)]">
                   SG
                 </div>
                 <div>
@@ -43,29 +43,29 @@ export default function Work() {
                     href="https://www.linkedin.com/company/2294248/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group inline-flex items-center gap-1.5 text-xl font-medium transition-colors hover:text-primary"
+                  className="group inline-flex items-center gap-1.5 text-xl font-medium text-white transition-colors hover:text-primary"
                   >
                     SELISE Group
                     <ArrowUpRight size={16} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                   </a>
-                  <p className="mt-1 text-sm text-slate-500">Full-time · 3 yrs 6 mos</p>
-                  <p className="mt-1 text-sm text-slate-500">Dhaka, Bangladesh · Hybrid</p>
+                  <p className="mt-1 text-sm text-slate-400">Full-time · 3 yrs 6 mos</p>
+                  <p className="mt-1 text-sm text-slate-400">Dhaka, Bangladesh · Hybrid</p>
                 </div>
               </header>
 
-              <ol className="relative ml-6 space-y-10 border-l border-primary/25 pl-8">
+              <ol className="relative ml-6 space-y-10 border-l border-primary/30 pl-8">
                 {seliseRoles.map((role) => (
                   <li key={role.title} className="relative">
-                    <span className={`absolute -left-[2.34rem] top-1.5 h-3 w-3 rounded-full border-2 border-white ${role.current ? 'bg-primary' : 'bg-slate-300'}`} />
+                    <span className={`absolute -left-[2.34rem] top-1.5 h-3 w-3 rounded-full border-2 border-[#030d22] ${role.current ? 'bg-primary shadow-[0_0_16px_rgba(192,132,252,0.8)]' : 'bg-violet-950'}`} />
                     <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
-                      <h3 className="text-lg font-medium text-slate-900">{role.title}</h3>
-                      <p className={`shrink-0 text-sm ${role.current ? 'font-medium text-primary' : 'text-slate-500'}`}>
+                      <h3 className="text-lg font-medium text-violet-50">{role.title}</h3>
+                      <p className={`shrink-0 text-sm ${role.current ? 'font-medium text-primary' : 'text-slate-400'}`}>
                         {role.dates}
                       </p>
                     </div>
 
                     {role.details && (
-                      <ul className="mt-4 space-y-3 text-slate-600">
+                      <ul className="mt-4 space-y-3 text-slate-300">
                         {role.details.map((detail) => (
                           <li key={detail} className="flex gap-3 text-sm leading-relaxed">
                             <Circle size={6} className="mt-2 flex-shrink-0 fill-current text-primary" />
@@ -83,15 +83,15 @@ export default function Work() {
               </ol>
             </article>
 
-            <div className="border-t border-slate-100 pt-16">
+            <div className="border-t border-violet-200/10 pt-16">
               <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-8">
                 <div>
-                  <h3 className="text-xl font-medium mb-1">Assistant Relationship Manager</h3>
-                  <p className="text-slate-600">UCB Stock Brokerage Limited</p>
+                  <h3 className="mb-1 text-xl font-medium text-white">Assistant Relationship Manager</h3>
+                  <p className="text-slate-300">UCB Stock Brokerage Limited</p>
                 </div>
-                <p className="shrink-0 text-sm text-slate-500">Aug 2021 – Nov 2022 · 1 yr</p>
+                <p className="shrink-0 text-sm text-slate-400">Aug 2021 – Nov 2022 · 1 yr</p>
               </div>
-              <ul className="mt-4 space-y-3 text-slate-600">
+              <ul className="mt-4 space-y-3 text-slate-300">
                 <li className="flex gap-3 text-sm leading-relaxed">
                   <Circle size={6} className="mt-2 flex-shrink-0 fill-current text-primary" />
                   <span>Built proactive client relationships, explored business opportunities, and managed portfolios.</span>

@@ -37,7 +37,7 @@ export default function Portfolio() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-slate-900">
+    <div className="min-h-screen bg-ocean text-slate-100">
       <Navigation activeSection={activeSection} scrollToSection={scrollToSection} />
       <Hero />
       <About />
