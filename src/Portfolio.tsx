@@ -7,13 +7,14 @@ import Skills from './components/Skills';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Projects from './components/Projects';
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'work', 'education', 'skills', 'contact'];
+      const sections = ['home', 'about', 'work', 'education', 'projects', 'skills', 'contact'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -43,6 +44,7 @@ export default function Portfolio() {
       <About />
       <Work />
       <Education />
+      <Projects />
       <Skills />
       <Contact />
       <Footer />

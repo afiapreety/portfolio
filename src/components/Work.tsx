@@ -44,7 +44,7 @@ export default function Work() {
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-12 gap-16">
           <div className="md:col-span-4">
-            <p className="text-sm text-primary tracking-wide mb-4">EXPERIENCE</p>
+            <p className="section-label mb-4">{'<Experience />'}</p>
           </div>
 
           <div className="md:col-span-8 space-y-16">

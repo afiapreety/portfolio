@@ -4,7 +4,7 @@ export default function About() {
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-12 gap-16">
           <div className="md:col-span-4">
-            <p className="text-sm text-primary tracking-wide mb-4">ABOUT ME</p>
+            <p className="section-label mb-4">{'<About />'}</p>
             
             <div className="mt-8 hidden md:block">
               <div className="aspect-square w-full max-w-xs rounded-lg overflow-hidden bg-slate-200">

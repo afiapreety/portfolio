@@ -24,7 +24,7 @@ export default function Contact() {
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-10 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-4">
-            <p className="text-sm tracking-wide text-primary">CONTACT</p>
+            <p className="section-label">{'<Contact />'}</p>
           </div>
 
           <div className="md:col-span-8">

@@ -11,7 +11,7 @@ export default function Skills() {
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-10 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-4">
-            <p className="mb-3 text-sm tracking-wide text-primary">WHAT I BRING</p>
+            <p className="section-label mb-3">{'<Skills />'}</p>
             <p className="max-w-xs text-sm leading-relaxed text-slate-500">
               Hands-on engineering paired with product-minded coordination from requirements through release.
             </p>

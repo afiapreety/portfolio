@@ -19,7 +19,7 @@ export default function Navigation({ activeSection, scrollToSection }: Navigatio
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const menuItems = ['about', 'work', 'education', 'skills', 'contact'];
+  const menuItems = ['about', 'work', 'education', 'projects', 'skills', 'contact'];
 
   const handleNavClick = (id: string) => {
     scrollToSection(id);
@@ -44,7 +44,7 @@ export default function Navigation({ activeSection, scrollToSection }: Navigatio
             <span>Afia Anjum Preety</span>
           </button>
           
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden items-center gap-7 md:flex">
             {menuItems.map((item) => (
               <button
                 key={item}

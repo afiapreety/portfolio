@@ -46,7 +46,7 @@ export default function Education() {
       <div className="mx-auto max-w-6xl">
         <div className="grid gap-12 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-4">
-            <p className="mb-4 text-sm tracking-wide text-primary">GROWTH & EDUCATION</p>
+            <p className="section-label mb-4">{'<Education />'}</p>
           </div>
 
           <div className="space-y-14 md:col-span-8">
