@@ -108,6 +108,5 @@ MIT License - feel free to use this template for your own portfolio!
 
 ## 🌐 Links
 
-- **Live Site**: [Your GitHub Pages URL]
-- **LinkedIn**: [Your LinkedIn]
-- **GitHub**: [Your GitHub]
+- **Live Site**: https://afiaanjumpreety.github.io/portfolio/
+
