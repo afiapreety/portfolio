@@ -21,7 +21,7 @@ A modern, responsive one-page portfolio website for showcasing my work as a Soft
 
 1. Clone the repository
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/afiapreety/portfolio.git
 cd portfolio
 ```
 
@@ -110,3 +110,8 @@ MIT License - feel free to use this template for your own portfolio!
 
 - **Live Site**: https://afiapreety.github.io/portfolio/
 
+
+## 🤝 Contributors
+
+- [@afiapreety](https://github.com/afiapreety)
+- [@afiapreetyinselise](https://github.com/afiapreetyinselise)
