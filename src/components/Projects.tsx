@@ -29,7 +29,7 @@ const tinyGarden = {
   name: 'Tiny Garden',
   description: 'Cozy, vibe-coded browser game',
   technologies: ['TypeScript', 'PixiJS'],
-  href: 'https://afiaanjumpreety.github.io/tiny-garden/',
+  href: 'https://afiapreety.github.io/tiny-garden/',
 };
 
 const projects = [
@@ -37,7 +37,7 @@ const projects = [
     name: 'Take a Sip',
     description: 'Cloud kitchen café for the office',
     technologies: ['Angular', 'Material UI', 'Node.js', 'Express', 'MongoDB'],
-    href: 'https://github.com/2apreety18/Take-A-Sip.git',
+    href: 'https://github.com/afiapreety/Take-A-Sip',
     youtubeId: 'ZusbiCBKvW0',
   },
   {
