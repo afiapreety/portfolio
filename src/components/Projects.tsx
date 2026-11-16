@@ -53,13 +53,14 @@ const projects: { name: string; year?: string; description: string; technologies
   },
   {
     name: 'Anomaly Detection in IoT',
-    description: 'Machine-learning based anomaly detection project',
+    year: '2019',
+    description: 'Undergraduate thesis: machine-learning based anomaly detection',
     technologies: ['Arduino', 'Python'],
   },
   {
     name: 'Personality Detection',
     year: '2018',
-    description: 'Personality detection from Twitter posts',
+    description: 'AI course lab work: personality detection from Twitter posts',
     technologies: ['Python'],
   },
 ];
