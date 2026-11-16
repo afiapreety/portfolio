@@ -99,11 +99,9 @@ export default function Projects() {
                   <div className="mt-4 max-w-2xl space-y-2 text-sm leading-relaxed text-slate-600">
                     <p>{worldOnAPlate.summary}</p>
                     <p>
-                      <span className="font-medium text-slate-900">Why HCI: </span>
                       {worldOnAPlate.hci}
                     </p>
                     <p>
-                      <span className="font-medium text-slate-900">References and citations: </span>
                       {worldOnAPlate.references}
                     </p>
                   </div>
