@@ -9,6 +9,7 @@ import worldReferences from '../assets/world-on-a-plate/references.jpg';
 
 const worldOnAPlate = {
   name: 'A World on a Plate',
+  year: '2026',
   description: 'An interactive atlas of dishes that travelled',
   summary:
     'Trace how 15 dish families became 137 regional versions across 51 countries: pick a dish and the world map redraws as its journey, or click a country to see everything cooked there.',
@@ -27,14 +28,16 @@ const worldOnAPlate = {
 
 const tinyGarden = {
   name: 'Tiny Garden',
+  year: '2026',
   description: 'Cozy, vibe-coded browser game',
   technologies: ['TypeScript', 'PixiJS'],
   href: 'https://afiapreety.github.io/tiny-garden/',
 };
 
-const projects = [
+const projects: { name: string; year?: string; description: string; technologies: string[]; href?: string; youtubeId?: string }[] = [
   {
     name: 'Take a Sip',
+    year: '2023',
     description: 'Cloud kitchen café for the office',
     technologies: ['Angular', 'Material UI', 'Node.js', 'Express', 'MongoDB'],
     href: 'https://github.com/afiapreety/Take-A-Sip',
@@ -42,6 +45,7 @@ const projects = [
   },
   {
     name: 'Fly Away',
+    year: '2023',
     description: 'Online flight booking application',
     technologies: ['Angular', 'Material UI', 'Node.js', 'Express', 'MongoDB'],
     href: 'https://github.com/shahidnsu/FlyAway.git',
@@ -54,10 +58,20 @@ const projects = [
   },
   {
     name: 'Personality Detection',
+    year: '2018',
     description: 'Personality detection from Twitter posts',
     technologies: ['Python'],
   },
 ];
+
+function YearBadge({ year }: { year?: string }) {
+  if (!year) return null;
+  return (
+    <span className="ml-3 inline-block rounded-full border border-slate-200 px-2 py-0.5 align-middle font-mono text-[10px] font-normal text-slate-500">
+      {year}
+    </span>
+  );
+}
 
 export default function Projects() {
   return (
@@ -88,6 +102,7 @@ export default function Projects() {
                       className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                     />
                   </a>
+                  <YearBadge year={worldOnAPlate.year} />
                   <p className="mt-1 text-sm text-slate-500">{worldOnAPlate.description}</p>
                   <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1 font-mono text-[11px] text-slate-600">
                     {worldOnAPlate.technologies.map((technology) => (
@@ -153,6 +168,7 @@ export default function Projects() {
                       className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                     />
                   </a>
+                  <YearBadge year={tinyGarden.year} />
                   <p className="mt-1 text-sm text-slate-500">{tinyGarden.description}</p>
                   <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1 font-mono text-[11px] text-slate-600">
                     {tinyGarden.technologies.map((technology) => (
@@ -219,6 +235,7 @@ export default function Projects() {
                       ) : (
                         <span className="text-base font-medium text-slate-900">{project.name}</span>
                       )}
+                      <YearBadge year={project.year} />
                       <span className="mt-1 block text-sm text-slate-500">{project.description}</span>
                       {project.youtubeId && (
                         <div className="mt-4 overflow-hidden rounded-lg border border-slate-200 bg-slate-100 shadow-sm">
