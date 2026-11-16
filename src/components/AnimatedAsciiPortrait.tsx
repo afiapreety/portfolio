@@ -10,7 +10,11 @@ type Particle = {
   character: string;
   opacity: number;
   phase: number;
+  delay: number;
 };
+
+const REVEAL_SPREAD = 450;
+const REVEAL_FADE = 220;
 
 export default function AnimatedAsciiPortrait() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -31,10 +35,15 @@ export default function AnimatedAsciiPortrait() {
     let width = 0;
     let height = 0;
     let cellHeight = 0;
+    let revealStart = reduceMotion ? -Infinity : 0;
+    let revealing = !reduceMotion;
 
     if (!context) return;
 
-    const draw = (time = 0) => {
+    const draw = (time = performance.now()) => {
+      if (revealing && revealStart === 0) revealStart = time;
+      const revealElapsed = time - revealStart;
+      if (revealing && revealElapsed > REVEAL_SPREAD + REVEAL_FADE) revealing = false;
       context.clearRect(0, 0, width, height);
       context.font = `600 ${cellHeight * 1.05}px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace`;
       context.textAlign = 'center';
@@ -70,13 +79,18 @@ export default function AnimatedAsciiPortrait() {
         particle.x += (targetX - particle.x) * easing;
         particle.y += (targetY - particle.y) * easing;
 
+        const reveal = revealing
+          ? Math.min(1, Math.max(0, (revealElapsed - particle.delay) / REVEAL_FADE))
+          : 1;
+        if (reveal === 0) return;
+
         context.fillStyle = isDisturbed
-          ? `rgba(165, 91, 65, ${Math.min(1, particle.opacity + 0.18)})`
-          : `rgba(41, 37, 36, ${particle.opacity})`;
+          ? `rgba(165, 91, 65, ${Math.min(1, particle.opacity + 0.18) * reveal})`
+          : `rgba(41, 37, 36, ${particle.opacity * reveal})`;
         context.fillText(particle.character, particle.x, particle.y);
       });
 
-      if (!reduceMotion || pointer.active) {
+      if (!reduceMotion || pointer.active || revealing) {
         animationFrame = requestAnimationFrame(draw);
       }
     };
@@ -139,6 +153,7 @@ export default function AnimatedAsciiPortrait() {
             character: CHARACTERS[characterIndex],
             opacity: Math.max(0.38, 1 - brightness * 0.5),
             phase: column * 0.31 + row * 0.17,
+            delay: (row / rows) * REVEAL_SPREAD + Math.random() * 80,
           });
         }
       }
@@ -146,8 +161,9 @@ export default function AnimatedAsciiPortrait() {
       draw();
     };
 
-    image.src = `${import.meta.env.BASE_URL}profile-cutout.png`;
     image.addEventListener('load', buildPortrait);
+    image.src = `${import.meta.env.BASE_URL}profile-ascii.jpg`;
+    if (image.complete) buildPortrait();
     const resizeObserver = new ResizeObserver(buildPortrait);
     resizeObserver.observe(frame);
 
