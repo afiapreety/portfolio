@@ -3,17 +3,17 @@ import { Github, Linkedin } from 'lucide-react';
 const contactLinks = [
   {
     label: 'LinkedIn',
-    href: 'https://linkedin.com/in/afiaanjumpreety',
+    href: 'https://www.linkedin.com/in/afiapreety',
     icon: <Linkedin size={20} strokeWidth={1.8} />,
   },
   {
     label: 'GitHub',
-    href: 'https://github.com/afiaanjumpreety',
+    href: 'https://github.com/afiapreety',
     icon: <Github size={20} strokeWidth={1.8} />,
   },
   {
     label: 'Dev.to',
-    href: 'https://dev.to/2apreety18',
+    href: 'https://dev.to/afiapreety',
     icon: <span className="text-[9px] font-bold tracking-tight">DEV</span>,
   },
 ];

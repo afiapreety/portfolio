@@ -41,7 +41,7 @@ export default function Hero() {
               View my experience
             </button>
             <a
-              href="https://linkedin.com/in/afiaanjumpreety"
+              href="https://www.linkedin.com/in/afiapreety"
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 text-sm font-medium text-slate-700 transition-colors hover:text-primary"
