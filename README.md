@@ -115,3 +115,5 @@ MIT License - feel free to use this template for your own portfolio!
 
 - [@afiapreety](https://github.com/afiapreety)
 - [@afiapreetyinselise](https://github.com/afiapreetyinselise)
+
+Thanks to everyone who has pitched in on this project.
