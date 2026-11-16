@@ -2,6 +2,28 @@ import { ArrowUpRight } from 'lucide-react';
 import tinyGardenStart from '../assets/tiny-garden/start-view.png';
 import tinyGardenGameplay from '../assets/tiny-garden/gameplay-view.png';
 import tinyGardenBloom from '../assets/tiny-garden/full-bloom-view.png';
+import worldHero from '../assets/world-on-a-plate/hero.jpg';
+import worldJourney from '../assets/world-on-a-plate/dish-journey.jpg';
+import worldAtlas from '../assets/world-on-a-plate/atlas-map.jpg';
+import worldReferences from '../assets/world-on-a-plate/references.jpg';
+
+const worldOnAPlate = {
+  name: 'A World on a Plate',
+  description: 'An interactive atlas of dishes that travelled',
+  summary:
+    'Trace how 15 dish families became 137 regional versions across 51 countries: pick a dish and the world map redraws as its journey, or click a country to see everything cooked there.',
+  hci:
+    'Designed as a Human-Computer Interaction project, with direct manipulation on the map, an origin confidence label so contested history reads honestly, keyboard search, a pausable hero carousel, light and dark themes, and a step-by-step cook mode.',
+  references:
+    'Every dish story carries numbered citations, and a References page lists each source with its publisher and the date it was consulted. A script checks that every reference link still resolves.',
+  technologies: ['React', 'TypeScript', 'D3', 'HCI'],
+  href: 'https://afiapreety.github.io/a-world-on-a-plate/',
+  gallery: [
+    { src: worldJourney, alt: 'Atlas map tracing how dumplings travelled from Northern China' },
+    { src: worldAtlas, alt: 'World map shaded by how many dishes each country holds' },
+    { src: worldReferences, alt: 'References page with numbered, dated citations for each dish' },
+  ],
+};
 
 const tinyGarden = {
   name: 'Tiny Garden',
@@ -53,6 +75,73 @@ export default function Projects() {
             <article className="border-t border-slate-200 py-7">
               <div className="flex items-start gap-4 sm:gap-6">
                 <span className="pt-1 font-mono text-[10px] text-slate-400">01</span>
+                <div className="min-w-0 flex-1">
+                  <a
+                    href={worldOnAPlate.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-2 text-xl font-medium text-slate-900 transition-colors hover:text-primary"
+                  >
+                    {worldOnAPlate.name}
+                    <ArrowUpRight
+                      size={17}
+                      className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                    />
+                  </a>
+                  <p className="mt-1 text-sm text-slate-500">{worldOnAPlate.description}</p>
+                  <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1 font-mono text-[11px] text-slate-600">
+                    {worldOnAPlate.technologies.map((technology) => (
+                      <span key={technology}>
+                        <span className="text-primary/60">#</span>{technology}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="mt-4 max-w-2xl space-y-2 text-sm leading-relaxed text-slate-600">
+                    <p>{worldOnAPlate.summary}</p>
+                    <p>
+                      <span className="font-medium text-slate-900">Why HCI: </span>
+                      {worldOnAPlate.hci}
+                    </p>
+                    <p>
+                      <span className="font-medium text-slate-900">References and citations: </span>
+                      {worldOnAPlate.references}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <a
+                href={worldOnAPlate.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open A World on a Plate"
+                className="group mt-6 block"
+              >
+                <figure className="overflow-hidden rounded-sm bg-slate-100">
+                  <img
+                    src={worldHero}
+                    alt="A World on a Plate home page: one dish, many homes, with noodle soup versions from eight countries"
+                    className="aspect-[11/6] w-full object-cover transition-transform duration-500 group-hover:scale-[1.015]"
+                  />
+                </figure>
+                <div className="mt-2 grid grid-cols-3 gap-2">
+                  {worldOnAPlate.gallery.map((image) => (
+                    <figure key={image.alt} className="overflow-hidden rounded-sm bg-slate-100">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        loading="lazy"
+                        className="aspect-[4/3] h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.015]"
+                      />
+                    </figure>
+                  ))}
+                </div>
+              </a>
+            </article>
+
+            <article className="border-t border-slate-200 py-7">
+              <div className="flex items-start gap-4 sm:gap-6">
+                <span className="pt-1 font-mono text-[10px] text-slate-400">02</span>
                 <div className="min-w-0 flex-1">
                   <a
                     href={tinyGarden.href}
@@ -114,7 +203,7 @@ export default function Projects() {
               {projects.map((project, index) => {
                 const content = (
                   <>
-                    <span className="pt-1 font-mono text-[10px] text-slate-400">0{index + 2}</span>
+                    <span className="pt-1 font-mono text-[10px] text-slate-400">0{index + 3}</span>
                     <span className="min-w-0 flex-1">
                       {project.href ? (
                         <a
